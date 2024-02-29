@@ -1,5 +1,7 @@
+import WorkInProgress from "@/app/components/WorkInProgress";
+
 const ProjectPage = () => {
-  return <h1>Projects</h1>;
+  return <WorkInProgress />;
 };
 
 export default ProjectPage;

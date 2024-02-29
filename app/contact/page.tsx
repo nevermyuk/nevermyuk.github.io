@@ -1,5 +1,7 @@
+import WorkInProgress from "@/app/components/WorkInProgress";
+
 const ContactPage = () => {
-  return <h1>Contact</h1>;
+  return <WorkInProgress />;
 };
 
 export default ContactPage;
