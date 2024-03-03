@@ -7,16 +7,9 @@ import { useEffect, useState } from "react";
 const ParticlesBackground = () => {
   const [init, setInit] = useState(false);
 
-  // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
       await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
@@ -25,7 +18,6 @@ const ParticlesBackground = () => {
   const particlesLoaded = (
     container?: Container | undefined
   ): Promise<void> => {
-    console.log(container);
     return Promise.resolve();
   };
 
@@ -34,11 +26,6 @@ const ParticlesBackground = () => {
       id="tsparticles"
       particlesLoaded={particlesLoaded}
       options={{
-        background: {
-          color: {
-            value: "#00000",
-          },
-        },
         fpsLimit: 120,
         interactivity: {
           events: {
@@ -63,10 +50,12 @@ const ParticlesBackground = () => {
         },
         particles: {
           color: {
-            value: "#ffffff",
+            value: ["#6366F1", "#4F46E5", "#0EA5E9", "#0284C7", "#0369A1"],
           },
           links: {
-            color: "#ffffff",
+            color: {
+              value: ["#6366F1", "#4F46E5", "#0EA5E9", "#0284C7", "#0369A1"],
+            },
             distance: 150,
             enable: true,
             opacity: 0.5,

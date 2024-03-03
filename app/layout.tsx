@@ -1,9 +1,9 @@
+import Navbar from "@/app/components/Navbar";
+import ParticlesBackground from "@/app/components/ui/ParticlesBackground";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/app/components/Navbar";
-import ParticlesBackground from "./components/ParticlesBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,7 +31,6 @@ export default function RootLayout({
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
           <ParticlesBackground />
-
           {children}
         </main>
       </body>
