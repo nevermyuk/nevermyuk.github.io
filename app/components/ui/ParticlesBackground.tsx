@@ -21,77 +21,81 @@ const ParticlesBackground = () => {
     return Promise.resolve();
   };
 
+  const colors = ["#6366F1", "#4F46E5", "#0EA5E9", "#0284C7", "#0369A1"];
+
   return (
-    <Particles
-      id="tsparticles"
-      particlesLoaded={particlesLoaded}
-      options={{
-        fpsLimit: 120,
-        interactivity: {
-          events: {
-            onHover: {
-              enable: true,
-              mode: "repulse",
+    <div className="absolute inset-0">
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={{
+          fpsLimit: 120,
+          interactivity: {
+            events: {
+              onHover: {
+                enable: true,
+                mode: "repulse",
+              },
+              resize: {
+                delay: 0.5,
+                enable: true,
+              },
             },
-            resize: {
-              delay: 0.5,
-              enable: true,
+            modes: {
+              push: {
+                quantity: 4,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
             },
           },
-          modes: {
-            push: {
-              quantity: 4,
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
-            },
-          },
-        },
-        particles: {
-          color: {
-            value: ["#6366F1", "#4F46E5", "#0EA5E9", "#0284C7", "#0369A1"],
-          },
-          links: {
+          particles: {
             color: {
-              value: ["#6366F1", "#4F46E5", "#0EA5E9", "#0284C7", "#0369A1"],
+              value: colors,
             },
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
-          },
-          move: {
-            direction: "none",
-            enable: true,
-            outModes: {
-              default: "bounce",
-            },
-            random: false,
-            speed: 0.5,
-            straight: false,
-          },
-          number: {
-            density: {
+            links: {
+              color: {
+                value: colors,
+              },
+              distance: 150,
               enable: true,
-              width: 1920,
-              height: 1080,
+              opacity: 0.5,
+              width: 1,
             },
-            value: 80,
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: false,
+              speed: 0.5,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                width: 1920,
+                height: 1080,
+              },
+              value: 80,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: { min: 1, max: 5 },
+            },
           },
-          opacity: {
-            value: 0.5,
-          },
-          shape: {
-            type: "circle",
-          },
-          size: {
-            value: { min: 1, max: 5 },
-          },
-        },
-        detectRetina: true,
-      }}
-    />
+          detectRetina: true,
+        }}
+      />
+    </div>
   );
 };
 
