@@ -102,7 +102,7 @@ const ParticlesBackground = () => {
                   value: { min: 1, max: 5 },
                 },
               },
-              detectRetina: true,
+              detectRetina: false,
             }}
           />
         </div>
