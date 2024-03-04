@@ -1,0 +1,45 @@
+---
+published: true
+title: "TileUp"
+description: "A web portal that offers a gamified interface for controlling an MSP432 robotic car."
+date: "2021-11-01"
+url: https://drive.google.com/file/d/11Is_9EhKXdzJ4gWS8LrpO50PH4mAJ7nY/view?usp=sharing
+technology:
+  [
+    "MongoDB",
+    "ExpressJS",
+    "VueJS",
+    "NodeJS",
+    "Embedded",
+    "C"
+  ]
+---
+
+TileUp introduces an innovative approach to interacting with an MSP432 robotic car, featuring a web portal that gamifies the control experience. The portal includes a real-time interface for viewing sensor data on the car, and uses color cues on the ground to dictate car movement based on the instructions given:
+
+- **Red** - Reverse
+- **Green** - Forward
+- **Blue** - Left and Right
+
+<Image src="/tile-up-web-portal.gif" width="718" height="404" alt="Image" />
+
+In the demonstrated example, the sensor detects the color green on the ground, allowing the forward movement instruction to execute.
+
+## Watch the demo here
+[Demo Video](https://drive.google.com/file/d/11Is_9EhKXdzJ4gWS8LrpO50PH4mAJ7nY/view?usp=sharing)
+
+## Framework Used
+
+The project employs the MEVN Stack for its development, which includes:
+
+- [MongoDB(M)](https://www.mongodb.com/) for database management,
+- [ExpressJS(E)](https://expressjs.com/) for the backend framework,
+- [VueJS(V)](https://vuejs.org/) for the frontend framework,
+- [NodeJS(N)](https://nodejs.org/en/) for the runtime environment.
+
+## How it Works
+
+HTTP requests from the VueJS frontend are handled by the ExpressJS server, facilitating communication between the user interface and the backend logic.
+
+## Objective
+TileUp offers a unique and engaging way to interact with robotic cars, providing an intuitive interface for users to control and monitor their vehicle in real-time.

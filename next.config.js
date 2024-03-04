@@ -5,7 +5,7 @@ const nextConfig = {
     reactStrictMode: true,
     output: 'export',
     swcMinify: true,
-    images: { unoptimized: true }
+    images: { unoptimized: true },
 };
 
 module.exports = withContentlayer(nextConfig)

@@ -1,8 +1,7 @@
 import Navbar from "@/components/Navbar";
-import ParticlesBackground from "@/components/ParticlesBackground";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import LocalFont from "next/font/local";
+import { Inter, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,9 +17,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const calSans = LocalFont({
-  src: "../public/fonts/CalSans-SemiBold.ttf",
-  variable: "--font-calsans",
+const sourceSans3 = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-source-sans-3",
 });
 
 export default function RootLayout({
@@ -29,15 +28,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    <html
+      lang="en"
+      className={[inter.variable, sourceSans3.variable].join(" ")}
+    >
       <body className="antialiased max-w-4xl mb-20 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-          <div className="z-30 relative">
-            <Navbar />
-          </div>
-          <ParticlesBackground />
-          <div className="z-10">{children}</div>
-        </main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+            <div>
+              <Navbar />
+            </div>
+            <div>{children}</div>
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
