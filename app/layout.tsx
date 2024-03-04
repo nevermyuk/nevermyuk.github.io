@@ -1,5 +1,5 @@
-import Navbar from "@/app/components/Navbar";
-import ParticlesBackground from "@/app/components/ui/ParticlesBackground";
+import Navbar from "@/components/Navbar";
+import ParticlesBackground from "@/components/ParticlesBackground";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";

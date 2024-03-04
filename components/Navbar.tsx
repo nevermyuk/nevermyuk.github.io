@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const navItems = [
   { pageName: "home", href: "/" },
-  { pageName: "blog", href: "/blog" },
+  { pageName: "posts", href: "/posts" },
   { pageName: "projects", href: "/projects" },
   { pageName: "contact", href: "/contact" },
 ];
@@ -22,7 +22,7 @@ export function Navbar() {
                 <Link
                   key={pageName}
                   href={href}
-                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2"
+                  className="transition-all hover:text-neutral-800 hover:text-neutral-200 flex align-middle relative py-1 px-2"
                 >
                   {pageName}
                 </Link>

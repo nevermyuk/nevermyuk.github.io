@@ -1,4 +1,4 @@
-import WorkInProgress from "@/app/components/WorkInProgress";
+import WorkInProgress from "@/components/WorkInProgress";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
