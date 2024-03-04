@@ -1,6 +1,11 @@
 import { SiGithub, SiGmail, SiLinkedin } from "@icons-pack/react-simple-icons";
+import { Metadata } from "next";
 import Link from "next/link";
 import { Card } from "../components/ui/Card";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
 
 const socials = [
   {
