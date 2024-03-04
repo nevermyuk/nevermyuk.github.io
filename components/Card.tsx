@@ -18,7 +18,7 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <div>
-      <BackgroundGradient className="rounded-[22px] max-w-sm bg-zinc-900">
+      <BackgroundGradient className="rounded-[22px] max-w-sm bg-zinc-950">
         <div
           onMouseMove={onMouseMove}
           className="overflow-hidden relative duration-700"
