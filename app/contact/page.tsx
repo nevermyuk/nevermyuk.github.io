@@ -4,10 +4,10 @@ import { Card } from "../components/ui/Card";
 
 const socials = [
   {
-    icon: <SiGmail size={20} />,
-    href: "mailto:zequanong@gmail.com",
-    label: "Email",
-    handle: "gmail",
+    icon: <SiLinkedin size={20} />,
+    href: "https://www.linkedin.com/in/zequanong/",
+    label: "Linkedin",
+    handle: "zequanong",
   },
   {
     icon: <SiGithub size={20} />,
@@ -16,17 +16,17 @@ const socials = [
     handle: "nevermyuk",
   },
   {
-    icon: <SiLinkedin size={20} />,
-    href: "https://www.linkedin.com/in/zequanong/",
-    label: "Linkedin",
-    handle: "zequanong",
+    icon: <SiGmail size={20} />,
+    href: "mailto:zequanong@gmail.com",
+    label: "Email",
+    handle: "gmail",
   },
 ];
 
 const ContactPage = () => {
   return (
     <div className="">
-      <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
+      <div className="grid w-full grid-cols-1 gap-8 mx-auto sm:mt-0 sm:grid-cols-3 lg:gap-16">
         {socials.map((s) => (
           <Card key={s.href}>
             <Link
