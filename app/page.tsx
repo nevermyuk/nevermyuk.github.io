@@ -34,8 +34,8 @@ export default async function HomePage() {
     <>
       <div className="relative">
         <div className="w-full max-w-4xl mx-auto overflow-hidden">
-          <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.90] bg-red-500 rounded-full blur-3xl" />
-          <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+          <div className="absolute inset-0 h-full w-full transform scale-[0.90] rounded-full blur-3xl dark:bg-gradient-to-r dark:from-blue-700 dark:to-teal-700 bg-gradient-to-r from-blue-200 to-teal-200" />
+          <div className="relative shadow-xl dark:bg-gray-900 dark:border-gray-800 bg-white border border-gray-200 px-4 py-8 overflow-hidden rounded-2xl flex flex-col justify-end items-start">
             <article className="prose dark:prose-invert relative z-10 p-4">
               <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
                 {page.title}
