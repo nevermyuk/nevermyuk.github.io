@@ -1,0 +1,39 @@
+---
+published: true
+title: "COVID-19 Population sentiment analysis"
+description: "This study explores the reaction of different cultures to mandatory mask-wearing measures."
+date: "2022-04-08"
+technology:
+  [
+    "Python",
+    "Pandas",
+    "NeatText",
+    "CoreNLP",
+    "Mallet",
+  ]
+---
+
+## Introduction
+Since the declaration of COVID-19 as a pandemic, responses to mask-wearing mandates have varied across countries. 
+This project investigates these reactions by analyzing Twitter data, focusing on the differences between collectivistic, moderate, and individualistic cultures.
+
+## Methodology
+### Data Collection
+Tweets containing the keyword "mask" were collected using Twint, a Twitter scraping tool.
+
+### Data Pre-processing
+Tweets were cleaned using Pandas and the NeatText library for NLP.
+
+### Data Analysis
+Sentiment analysis was performed with CoreNLP, followed by topic modeling using Mallet to explore the main topics within each sentiment category.
+
+## Results
+### Sentiment Analysis
+Negative sentiments were prevalent across all countries, with specific nuances based on cultural context and current events.
+
+### Topic Modeling
+Topic modeling revealed common concerns and topics among tweets with similar sentiments, providing insights into the specific issues and discussions surrounding mask-wearing in each country.
+
+## Conclusion
+The study highlights the complexity of public sentiment towards mask-wearing mandates, influenced by cultural differences and individual perspectives. 
+
