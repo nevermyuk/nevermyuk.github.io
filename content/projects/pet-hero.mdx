@@ -1,0 +1,57 @@
+---
+published: true
+title: "Pet Heroes"
+description: "Web application that enables pet shelters to list pets for adoption."
+date: "2022-10-01"
+repository: https://github.com/nevermyuk/pet_hero
+technology:
+  [
+    "Typescript",
+    "Nest.js",
+    "REST",
+    "React.js",
+    "Express",
+    "Postgres",
+    "Docker",
+    "OWASP",
+    "Nginx",
+    "Grafana",
+  ]
+---
+
+Pet Heroes is a full-stack web application designed to assist pet shelters in uploading pets available for adoption. This project emphasizes security, employing OWASP principles, and leverages Docker for containerization to ensure a reliable and scalable environment.
+
+## Technologies Used
+- **Frontend**: React.js
+- **Backend**: Nest.js with Express
+- **Database**: PostgreSQL
+- **Containerization**: Docker
+- **Monitoring**: Grafana, Prometheus
+- **Logging**: Loki, Tempo
+- **Security**: OWASP standards
+
+## Key Features
+- Secure and scalable architecture using Docker and nginx.
+- Comprehensive monitoring and logging with Grafana, Prometheus, and Loki.
+- Intuitive interface for pet shelters to upload pet details.
+- Robust backend built with Nest.js.
+
+## Architecture Overview
+The application is containerized using Docker, with separate services for the frontend, backend, database, and monitoring tools. The backend service, named `backend`, runs a Nest.js application, while the frontend service, `frontend`, serves a React.js application. Data persistence is managed through a PostgreSQL database, `postgres`. 
+
+Monitoring is handled by Grafana for visualization, Prometheus for metrics collection, and Loki for log aggregation. Tempo is used for tracing to enhance observability. 
+
+## Deployment Configuration
+The application uses Docker Compose for deployment, facilitating easy setup and scalability. The `docker-compose.yml` file includes configurations for all services, including environment variables, volume mappings, and network settings to ensure smooth interaction between containers.
+
+## Security Measures
+Security is a cornerstone of Pet Heroes, integrating OWASP principles to safeguard against common vulnerabilities. The application uses HTTPS protocols and relies on secure Docker practices.
+
+## Monitoring and Logging
+The application boasts an extensive monitoring and logging setup, with Grafana for dashboards, Prometheus for metrics, Loki for logs, and Tempo for tracing. This setup ensures high observability, allowing for timely detection and resolution of issues.
+
+## How to Use
+1. Clone the repository.
+2. Ensure Docker and Docker Compose are installed on your machine.
+3. Navigate to the project directory and run `docker-compose up` to build and start the services.
+4. Access the frontend through `pethero.test` and the Grafana dashboard through `dashboard.pethero.test`.
