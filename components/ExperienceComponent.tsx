@@ -26,17 +26,17 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) => {
       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
         {experience.role} 🔧 {experience.company}
       </h3>
-      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+      <h4 className=" text-xl font-semibold tracking-tight">
         {startDate} — {endDate}
       </h4>
       <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
         {experience.serviceType}
       </h4>
-      <article>
+      <article className="py-6 prose dark:prose-invert">
         <Mdx code={experience.body.code} />
       </article>
       {experience.technology.length ? (
-        <div className="flex items-center gap-2 mt-4">
+        <div className="flex flex-wrap items-center gap-2 mt-4">
           {experience.technology.map((tech) => (
             <Badge key={tech} variant="secondary">
               {tech}
