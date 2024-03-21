@@ -47,6 +47,19 @@ export async function generateStaticParams(): Promise<
   }));
 }
 
+interface ProjectLinkProps {
+  href: string;
+  IconComponent: React.ElementType;
+}
+
+const ProjectLink: React.FC<ProjectLinkProps> = ({ href, IconComponent }) => (
+  <span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm border rounded-full text-zinc-200 border-zinc-500 hover:bg-accent hover:text-accent-foreground">
+    <Link href={href} target="_blank" className="p-4 relative flex flex-col">
+      <IconComponent />
+    </Link>
+  </span>
+);
+
 export default async function ProjectPage({ params }: ProjectProps) {
   const project = await getProjectFromParams(params);
 
@@ -62,26 +75,10 @@ export default async function ProjectPage({ params }: ProjectProps) {
       )}
       <div className="flex items-center space-x-4">
         {project.repository && (
-          <span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
-            <Link
-              href={project.repository}
-              target="_blank"
-              className="p-4 relative flex flex-col "
-            >
-              <SiGithub />
-            </Link>
-          </span>
+          <ProjectLink href={project.repository} IconComponent={SiGithub} />
         )}
         {project.url && (
-          <span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
-            <Link
-              href={project.url}
-              target="_blank"
-              className="p-4 relative flex flex-col "
-            >
-              <IconWorld />
-            </Link>
-          </span>
+          <ProjectLink href={project.url} IconComponent={IconWorld} />
         )}
       </div>
 

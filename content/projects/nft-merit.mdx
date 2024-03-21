@@ -1,0 +1,42 @@
+---
+published: true
+title: "NFT-Merit: Transparent Student Education Record System"
+description: "Ethereum NFT DApp"
+date: "2022-08-21"
+url: https://ieeexplore.ieee.org/document/10148470
+technology:
+  [
+    "Ethereum",
+    "React",
+    "Solidity",
+    "IPFS",
+    "Fleek",
+    "Truffle Suite",
+  ]
+---
+
+NFT-Merit is a decentralized application (dApp) focused on revolutionizing student education record management through blockchain technology. By creating a transparent, immutable, and trusted environment, NFT-Merit addresses the challenges of degree fraud and data integrity in the education sector. Built on the Ethereum blockchain and utilizing Non-Fungible Tokens (NFTs) to represent student grades, this project showcases the potential of blockchain in ensuring the verifiability and authenticity of academic records.
+
+<Image src="/nft-merit-sys-architecture.png" width="718" height="404" alt="NFT-Merit Overview" />
+
+## System Architecture and Technologies
+
+The NFT-Merit system is a fully decentralized application that interacts exclusively with the blockchain. The frontend is developed with the React JavaScript framework and Web3.js for Ethereum network interactions. The site is hosted on the InterPlanetary File System (IPFS) via Fleek, promoting decentralized data storage and sharing. The backend comprises smart contracts written in Solidity, deployed on the Ethereum Rinkeby testnet to avoid the cost barriers of the mainnet. MetaMask, a popular crypto wallet extension, facilitates one-click system logins and transaction signing, leveraging Infura as the provider endpoint for blockchain interactions.
+
+## Key Features
+
+### Role-based Access Control
+- Implements role-based permissions, restricting actions within the smart contract to authorized roles, such as faculty-only certificate issuance.
+
+### Certificate Issuance
+- Faculties can batch mint NFTs as digital certificates for up to 10 students per transaction, each NFT embedding key information like Module, Grade, and Recipient Address.
+
+### Certificate Management (Re-evaluation)
+- Supports certificate re-evaluation requests, allowing faculty to modify certificate metadata in response to student appeals.
+
+### Transactions Viewing
+- A dedicated page for users to view blockchain transactions that affect them, enhancing transparency and accountability.
+
+## Conclusion
+
+NFT-Merit exemplifies the innovative use of blockchain technology in the education sector, offering a robust framework for the issuance, verification, and management of academic records as NFTs. This project paves the way for further exploration of blockchain applications in education.
